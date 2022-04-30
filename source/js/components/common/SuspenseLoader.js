@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import { useTranslation } from 'react-i18next'
-
-import './footer.scss';
+import React from 'react'
 
 // example of react Hook with translation
 function SuspenseLoader() {
-  const { t } = useTranslation();
-  return (<div>{t('loading')} ...</div>);
+  // const { t } = useTranslation();
+  return (<div>loading ...</div>);
 }
 
 export default SuspenseLoader
