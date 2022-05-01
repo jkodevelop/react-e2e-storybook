@@ -1,11 +1,15 @@
 import React from 'react'
 import './hi.scss';
+import { withTranslation } from 'react-i18next';
 
-const Hi = () => {
+const Hi = (props) => {
+  const { t } = props;
   return (
-      <h1 className="hi">Welcome to React</h1>
-    
+    <>
+      <h1>{t('Welcome to React')}</h1>
+      <div className="hi">{t('hi-content')}</div>
+    </>
   );
 };
 
-export default Hi
+export default withTranslation()(Hi)
