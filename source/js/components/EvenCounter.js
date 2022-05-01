@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { incrementCountEven, decrementCountEven } from '../actions/index.js'
 // import { withTranslation } from 'react-i18next'
 
-// import('./evenCounter.scss');
+import('./evenCounter.scss');
 
 const EvenCounter = (props) => {
 

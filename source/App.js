@@ -13,6 +13,7 @@ import store from './store.js';
 import NotFound from './js/NotFound.js';
 import Hi from './js/pages/Hi.js';
 import Header from './js/components/common/Header.js';
+import Footer from './js/components/common/Footer.js';
 
 // for lazy loading placeholder
 import SuspenseLoader from './js/components/common/SuspenseLoader.js';
@@ -26,6 +27,7 @@ const SingleCounter = lazy(() =>
     return import(/* webpackChunkName: "SingleCounter" */'./js/components/SingleCounter.js')
   }));
 
+import './app.scss';
 
 const App = (props) => {
   
@@ -33,7 +35,7 @@ const App = (props) => {
     <Header />
     <h2>Welcome To React App</h2>
     <h3>Date : {new Date().toDateString()}</h3>
-    <div>
+    <div className="main-container">
 
       <div className="column left sidebar">
         <ul className="menu">
@@ -54,6 +56,7 @@ const App = (props) => {
       </div>
 
     </div>
+    <Footer />
 
   </Router>)
 };
