@@ -7,6 +7,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { withTranslation } from 'react-i18next';
 
 import store from './store.js';
 
@@ -31,6 +32,8 @@ import './app.scss';
 
 const App = (props) => {
   
+  const { t } = props;
+
   return (<Router>
     <Header />
     <h2>Welcome To React App</h2>
@@ -39,9 +42,9 @@ const App = (props) => {
 
       <div className="column left sidebar">
         <ul className="menu">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="single">Single</Link></li>
-          <li><Link to="even">Even</Link></li>
+          <li><Link to="/">{t('hi')}</Link></li>
+          <li><Link to="single">{t('single-counter')}</Link></li>
+          <li><Link to="even">{t('even-counter')}</Link></li>
         </ul>
       </div>
       <div className="column right content">
@@ -63,4 +66,4 @@ const App = (props) => {
 
 const mapStateToProps = state => ({})
 const mapDispatchToProps = dispatch => ({})
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(App));
