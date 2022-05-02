@@ -20,10 +20,9 @@ For development these libraries are in place:
 - react-redux
 - babel enabled
 - sass/scss
-- webpack (file/sass loaders)
-- react-hot-loader
+- webpack
 - i18next (localization)
-- react-router-dom (version 5)
+- react-router-dom
 
 There are examples for hot loading component and reducer injection code samples  inside ./source/js/components/App.js
 

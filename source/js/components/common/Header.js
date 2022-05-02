@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { hot } from 'react-hot-loader/root'
 import { withTranslation } from 'react-i18next'
 
 import Button from './Button.js';
@@ -34,4 +33,4 @@ class Header extends Component {
   }
 }
 
-export default withTranslation()(hot(Header))
+export default withTranslation()(Header)

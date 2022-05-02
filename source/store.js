@@ -1,11 +1,13 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createReducer from './js/reducers/index.js';
-import { composeWithDevTools } from 'redux-devtools-extension';
+// import { composeWithDevTools } from 'redux-devtools-extension';
 // import thunk from 'redux-thunk';
 import loggingActions from './js/middlewares/loggingActions.js';
 
 function makeStore() {
   const initialState = {};
+
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
   const customMiddlewares = [
     // thunk,
@@ -15,10 +17,7 @@ function makeStore() {
   const store = createStore(
     createReducer(),
     initialState,
-    composeWithDevTools(
-      applyMiddleware(...customMiddlewares),
-      // other store enhancers if any
-    ),
+    composeEnhancers(applyMiddleware(...customMiddlewares)),
   );
 
   store.asyncReducers = {};
@@ -27,17 +26,6 @@ function makeStore() {
     store.replaceReducer(createReducer(store.asyncReducers));
     return store;
   };
-
-  if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('./js/reducers/index.js', () => {
-      try {
-        store.replaceReducer(createReducer(store.asyncReducers));
-      } catch (error) {
-        console.error(chalk.red(`==> Reducer hot reloading error ${error}`));
-      }
-    });
-  }
 
   return store;
 }

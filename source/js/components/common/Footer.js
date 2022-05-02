@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { hot } from 'react-hot-loader/root'
 import { useTranslation } from 'react-i18next'
 
 import './footer.scss';
@@ -16,4 +15,4 @@ function Footer() {
   );
 }
 
-export default hot(Footer)
+export default Footer
