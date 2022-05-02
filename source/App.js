@@ -36,8 +36,6 @@ const App = (props) => {
 
   return (<Router>
     <Header />
-    <h2>Welcome To React App</h2>
-    <h3>Date : {new Date().toDateString()}</h3>
     <div className="main-container">
 
       <div className="column left sidebar">

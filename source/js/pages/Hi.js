@@ -7,6 +7,7 @@ const Hi = (props) => {
   return (
     <>
       <h1>{t('Welcome to React')}</h1>
+      <h3>Date : {new Date().toDateString()}</h3>
       <div className="hi">{t('hi-content')}</div>
     </>
   );

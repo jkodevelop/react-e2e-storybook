@@ -1,3 +1,6 @@
+body{
+  margin:0;
+}
 .menu{
   padding: 0;
   margin: 0;
@@ -7,6 +10,7 @@
     border: 1px solid #ccc;
     border-bottom: 0;
     a{
+      box-sizing: border-box;
       width: 100%;
       display: block;
       padding: 20px;
@@ -20,5 +24,27 @@
       color: black;
       background-color: #efefef;
     }
+  }
+}
+.container{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.main-container{
+  display: flex;
+  flex: 1;
+  .column.left{
+    width: 25%;
+    background-color: $primary-color; 
+  }
+  .column.right{
+    width: 75%;
+    padding: 20px;
+  }
+}
+.content{
+  h1{
+    margin: 0;
   }
 }
