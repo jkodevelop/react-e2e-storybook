@@ -12,3 +12,6 @@ https://stackoverflow.com/questions/64474426/webpack-5-live-reload
 
 react-i18n
 https://lokalise.com/blog/react-i18n-intl/
+
+storybook + webpack 5
+https://storybook.js.org/blog/storybook-for-webpack-5/
