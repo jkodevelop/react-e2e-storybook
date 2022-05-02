@@ -1,0 +1,18 @@
+{
+  "Header Text": "React Plaque de chaudière",
+  "Welcome to React": "Bienvenue à React et react-i18next",
+  "en": "English",
+  "fr": "Française",
+  "Footer": "bas de page",
+  "Not Found": "Page non trouvée",
+  "hi-content": "Ceci est une simple fin pour mettre fin à projet pour boilerplate react-redux",
+  "add": "ajouter",
+  "subtract": "soustraire",
+  "example-lazy": "Exemple de chargement paresseux de react.",
+  "example-lazy-inject": "Exemple de chargement paresseux de react et d\"injection de reducer",
+  "hi": "Salut",
+  "single-counter": "Compteur unique",
+  "even-counter": "Même compteur",
+  "loading": "Chargement",
+  "datenow": "À présent: {{date, y-m-d}}"
+}

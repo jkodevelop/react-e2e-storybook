@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import { incrementCount, decrementCount } from '../actions/index.js'
-// import { withTranslation } from 'react-i18next'
-
+import { withTranslation } from 'react-i18next'
 
 const SingleCounter = (props) => {
 
@@ -19,14 +18,13 @@ const SingleCounter = (props) => {
     decrementCount(-1);
   }
 
-  // const { t } = this.props;
-  const { counter } = props;
+  const { counter,t } = props;
   return (
     <div className="single-counter page-content">
-      <p>example-lazy-inject</p>
+      <p>{t('example-lazy-inject')}</p>
       <p className="single-counter-val">{counter}</p>
-      <button onClick={addClick}>add +</button>
-      <button onClick={minusClick}>subtract -</button>
+      <button onClick={addClick}>{t('add')} +</button>
+      <button onClick={minusClick}>{t('subtract')} -</button>
     </div>  
   );
   
@@ -40,4 +38,5 @@ const mapDispatchToProps = dispatch => ({
   incrementCount: c => dispatch(incrementCount(c)),
   decrementCount: c => dispatch(decrementCount(c)),
 })
-export default connect(mapStateToProps, mapDispatchToProps)(SingleCounter);
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(SingleCounter));

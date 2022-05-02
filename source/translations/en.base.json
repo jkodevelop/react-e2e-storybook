@@ -1,0 +1,18 @@
+{
+  "Header Text": "React Boilerplate",
+  "Welcome to React": "Welcome to React and react-i18next",
+  "en": "English",
+  "fr": "Française",
+  "Footer": "footer",
+  "Not Found": "Page not found",
+  "hi-content": "This is a simple end to end boilerplate project for react-redux",
+  "add": "add",
+  "subtract": "subtract",
+  "example-lazy": "Example of react lazy loading.",
+  "example-lazy-inject": "Example of react lazy loading and reducer injection.",
+  "hi": "Hi",
+  "single-counter": "Single Counter",
+  "even-counter": "Even Counter",
+  "loading": "Loading",
+  "datenow": "Now: {{date, m/d/y}}"
+}
