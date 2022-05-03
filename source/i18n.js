@@ -24,9 +24,9 @@ i18n
       format: function(value, format, lng) {
         if(value instanceof Date){
           if(format === 'm/d/y'){ 
-            return (value.getUTCMonth() + 1).toString() + "/" + value.getUTCDate() + "/" + value.getUTCFullYear().toString()
+            return (value.getUTCMonth() + 1).toString() + '/' + value.getUTCDate() + '/' + value.getUTCFullYear().toString()
           }else{
-            return value.getUTCFullYear().toString() + "-" + (value.getUTCMonth() + 1).toString() + "-" + value.getUTCDate()
+            return value.getUTCFullYear().toString() + '-' + (value.getUTCMonth() + 1).toString() + '-' + value.getUTCDate()
           }
         }
         return value;

@@ -6,7 +6,7 @@ import {
   Routes,
   Route,
   Link
-} from "react-router-dom";
+} from 'react-router-dom';
 import { withTranslation } from 'react-i18next';
 
 import store from './store.js';

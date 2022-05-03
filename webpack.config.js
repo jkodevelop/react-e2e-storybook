@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -32,6 +33,9 @@ module.exports = {
     }),
     new StylelintPlugin({
       configFile: path.resolve(__dirname, '.stylelintrc.json'),
+      fix: false
+    }),
+    new ESLintPlugin({
       fix: false
     }),
     // this allows you to extract the style into it's own file
