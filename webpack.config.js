@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
@@ -28,6 +29,10 @@ module.exports = {
     // 2) injects the bundle(s) in the same file
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'source', indexHtmlName)
+    }),
+    new StylelintPlugin({
+      configFile: path.resolve(__dirname, '.stylelintrc.json'),
+      fix: false
     }),
     // this allows you to extract the style into it's own file
     // effective replacing style-loader (which injects the css code directly into the html)
